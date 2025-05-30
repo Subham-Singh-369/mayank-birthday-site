@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery of Memories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📸 How You’ve Grown, Mayank!</h1>
+  <p class="message">From childhood to now, here’s a little journey of your amazing growth. 💫</p>
+
+  <div class="gallery">
+    <img src="media/sample1.jpg" alt="Childhood 1">
+    <img src="media/your-image-1.jpg" alt="Childhood 2">
+    <img src="media/your-image-2.jpg" alt="Childhood 3">
+    <img src="media/your-image-3.jpg" alt="Childhood 4">
+  </div>
+
+  <div class="gallery">
+    <img src="media/your-image-4.jpg" alt="Now 1">
+    <img src="media/your-image-5.jpg" alt="Now 2">
+    <img src="media/your-image-6.jpg" alt="Now 3">
+    <img src="media/your-image-7.jpg" alt="Now 4">
+  </div>
+
+  <div class="btn-area">
+    <a href="index.html" class="btn">🔙 Back to Start</a>
+  </div>
+   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const duration = 5000;
+      const end = Date.now() + duration;
+      (function frame() {
+        confetti({
+          particleCount: 4,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: ['#f39c12', '#f1c40f']
+        });
+        confetti({
+          particleCount: 4,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: ['#f39c12', '#f1c40f']
+        });
+        if (Date.now() < end) requestAnimationFrame(frame);
+      })();
+    });
+  </script>
+</body>
+</html>
+</body>
+</html>
